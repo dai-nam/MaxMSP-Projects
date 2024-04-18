@@ -1,0 +1,43 @@
+TouchDesigner + Kinect Tutorial 
+https://derivative.ca/download
+
+What is OSC?
+https://www.youtube.com/watch?v=bupVHvMEAz0&ab_channel=ZEALCO-CreativeResearchOperation
+
+
+Connect TouchDesigner & Max 8 with OSC Tutorial
+https://www.youtube.com/watch?v=AcqC5rRmu3M&ab_channel=TheInteractive%26ImmersiveHQ
+
+Abstandsberechnung über Satz dse Pythagoras:
+Abstand = sqrt(x² + z²)
+https://www.mathe-lerntipps.de/abstand-zweier-punkte/
+
+MultiSense OSC App
+
+127.0.0.1 (localhost) --> bedeutet der gleiche Computer
+Port einstellen (z.B. 8000)
+Name der Daten z.B. /headX /headY /headZ
+
+Falls OSC Daten nciht vom gleichen Computer kommen:
+ipconfig ipv4-Adresse (unter Windows)
+im gleichen Wlan sein
+
+Data Smoothing
+https://www.youtube.com/watch?v=RCHgQOPaT08&ab_channel=SoundSimulator
+
+Beap für Effekte
+
+
+
+----------------
+1. Kinect besorgen
+2. Software finden für Kinect Tracking (Windows mit dp.kinect für Max oder TouchDesigner Free)
+3. Kinect Tracking ans Laufen bekommen (in max oder TouchDesigner)
+4. Falls TouchDesigner dann OSC-Kommunikation ans Laufen kriegen
+5. Daten smoothen und richtig routen(route Objekt nach udpreceive)
+
+6. Sounds steuern (!)
+
+
+
+

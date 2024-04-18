@@ -1,0 +1,51 @@
+//12 Oktaven
+var freqs = [0, 20, 40, 80, 160, 320, 640, 1280, 2560, 5120, 10240, 20480];
+var newFreqs = [];
+var initialized = false;
+
+init();
+//Anzahl Bänder 0: 12, 1: 23, 2: 45, 3: 89, 4: 177, 5: 353, 6: 705, 7: 1409
+createBands(7);
+
+function copyArray()
+{
+    newFreqs = [...freqs];
+}
+
+function init()
+{	
+	if(initialized)
+		return;
+		
+	copyArray();
+	initialized = true;
+	console.log("Initialized");
+}
+
+
+function createBands(a)
+{
+    var tmp = [];
+
+	for(i = 0; i < a; i++)
+	{
+		for(j = 0; j < newFreqs.length-1; j++)
+		{
+				tmp.push((newFreqs[j+1] - newFreqs[j]) * 0.5 + newFreqs[j]);	
+		}
+			for(k = 0; k < tmp.length; k++)
+		{
+				newFreqs.push(tmp[k]);	
+		}
+		newFreqs.sort(function(a, b){return a - b}); ;
+		tmp = [];
+	}
+ printConsole();
+}
+
+function printConsole()
+{
+    console.log(...newFreqs);
+}
+
+
