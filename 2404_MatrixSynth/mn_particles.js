@@ -2,10 +2,15 @@ autowatch = 1;
 outlets = 0;
 
 
-var points = [];
+var particles = [];
+var samples = [];
+var chains = [];
 
-var speed = 1;
-declareattribute("speed");
+
+var xspeed = 1;
+declareattribute("xspeed");
+var yspeed = 1;
+declareattribute("yspeed");
 
 var dist = 0.3;
 declareattribute("dist");
@@ -42,37 +47,42 @@ mySketch.blend = "alphablend";
 
 
 
-function insert() {
+function insertPoint() {
   var a = arrayfromargs(messagename,arguments);
 	a.shift();
-	//var point = new Vector(a[0], a[1], 0);
-	var particle = new Particle(a[0], a[1], speed/100, speed/100);
-	//post(a[0], a[1]);
+	var particle = new Particle(a[0], a[1], xspeed/100, yspeed/100);
 	if(!moveWithMouse())
 	{
-		points.push(particle);
+		particles.push(particle);
 	}
 }
+
+function insertSample() {
+  var a = arrayfromargs(messagename,arguments);
+	a.shift();
+	var sample = new Sample(a[0], a[1], xspeed/100, yspeed/100);
+	if(!moveWithMouse())
+	{
+		samples.push(sample);
+		chains.push(new Chain(sample));
+	}
+}
+
 
 
 function clear() {
-	points = [];
+	particles = [];
+	samples = [];
+	chains = [];
 }
 
-function create() {
-	for(var i = 0; i < points.length; i++)
-	{
-		//outlet(0, points[i].pos.x+" "+points[i].pos.y);
-		mySketch.moveto(points[i].pos.x, points[i].pos.y, 0);
-		mySketch.circle(radius);
-	}
-}
+
 
 function print()
 {
 	for(var i = 0; i < points.length; i++)
 	{
-		post(points[i].pos.x+" "+points[i].pos.y+"\n");
+		post(particles[i].pos.x+" "+particles[i].pos.y+"\n");
 	}
 }	
 
@@ -83,15 +93,24 @@ function draw()
 {
 	myRender.erase();
 	
-	for(var i = 0; i < points.length; i++)
+	for(var i = 0; i < particles.length; i++)
 	{
-		points[i].move();
+		particles[i].move();
+		particles[i].display();
+	}
+
+	for(var i = 0; i < samples.length; i++)
+	{
+		samples[i].move();
+		samples[i].display();
 	}
 	
-	create();
+	for(var j = 0; j < chains.length; j++)
+	{
+		chains[j].update();
+	}
 	
-	drawCloseLines();
-	showTail();
+	
 	mySketch.draw();
 	myRender.drawswap();
 
@@ -101,49 +120,6 @@ function draw()
 }
 
 
-function drawCloseLines()
-{
-		if(points.length < 2)
-			{
-				return;
-			}
-			
-		for(var i = 0; i < points.length-1; i++)
-		{
-			
-			for(var j = i+1; j < points.length; j++)
-			{
-				var d = points[i].pos.distance(points[j].pos);
-				if(d > dist)
-				{
-					continue;
-				}
-				
-				mySketch.linesegment(points[i].pos.x, points[i].pos.y, points[i].pos.z, points[j].pos.x, points[j].pos.y, points[j].pos.z);
-				/*
-				var msg = "linesegment "+points[i].pos.x+" "+points[i].pos.y+" "+points[i].pos.z+" "
-					+points[j].pos.x+" "+points[j].pos.y+" "+points[j].pos.z;
-				outlet(1, msg);
-				*/
-			}
-	
-		}
-}
-
-
-
-function showTail()
-{
-	if(points.length == 0)
-	{
-		return;
-	}
-	var last = points.length-1;
-	mySketch.moveto(points[last].pos.x, points[last].pos.y, 0);
-	mySketch.glcolor(1, 0, 0, 1);
-	mySketch.gllinewidth(3);
-	mySketch.framecircle(radius+0.01);
-}
 
 function moveWithMouse()
 {
@@ -155,6 +131,12 @@ function Particle(x, y, sx, sy) {
     this.pos = new Vector(x, y, 0);
     this.speedX = sx;
     this.speedY = sy;
+	this.isConnected = false;
+}
+
+Particle.prototype.display = function() {
+		mySketch.moveto(this.pos.x, this.pos.y, 0);
+		mySketch.circle(radius);
 }
 
 Particle.prototype.move = function() {
@@ -183,3 +165,141 @@ Particle.prototype.move = function() {
 	this.pos.y += this.speedY;
 
 };
+
+
+function Sample(x, y, sx, sy) {
+    this.pos = new Vector(x, y, 0);
+    this.speedX = sx;
+    this.speedY = sy;
+}
+
+Sample.prototype.move = function() {
+	
+		
+	if(moving == 0)
+	{
+		return;
+	}
+
+
+	var padding = 0.8;
+	
+	if(this.pos.x < -padding || this.pos.x > padding)
+	{
+		this.speedX = -this.speedX;
+	}
+				
+	
+	if(this.pos.y < -padding || this.pos.y > padding)
+	{
+		this.speedY = -this.speedY;
+	}
+		
+	this.pos.x += this.speedX;
+	this.pos.y += this.speedY;
+
+};
+
+
+Sample.prototype.display = function() {
+		mySketch.glcolor(0, 0, 1, 1);	
+		mySketch.moveto(this.pos.x, this.pos.y, 0);
+		mySketch.circle(radius);
+};
+
+
+
+
+function Chain(root) {
+	this.points = [];
+	this.head = root;
+	this.tail = null;
+	this.addPoint(root);
+}
+
+Chain.prototype.addPoint = function(point) {
+	this.points.push(point);
+	this.tail = point;
+};
+
+Chain.prototype.removePoint = function() {
+
+};
+
+
+
+Chain.prototype.displayTail = function() {
+	if(this.points.length == 0)
+	{
+		return;
+	}
+		
+		mySketch.glpushmatrix();
+		mySketch.moveto(this.tail.pos.x, this.tail.pos.y, 0);
+		mySketch.glcolor(1, 0, 0, 1);	
+		mySketch.gllinewidth(3);
+		mySketch.framecircle(radius+0.02);	
+		mySketch.glpopmatrix();
+};
+
+Chain.prototype.update = function() {
+
+	this.displayTail();
+		this.disconnectTail();
+	this.makeConnections();
+	this.drawConnections();
+};
+
+Chain.prototype.makeConnections = function() {
+	for(var i = 0; i < particles.length; i++)
+	{
+		var p = particles[i];
+		
+		if(p.isConnected)
+		{
+			continue;
+		}
+		
+		var d = this.tail.pos.distance(p.pos);
+		if(d > dist)
+		{
+			continue;
+		}
+		
+		this.points.push(p);
+		p.isConnected = true;		
+		this.tail = p;
+	}
+};
+
+Chain.prototype.disconnectTail = function() {
+	if(this.points.length < 2)
+		return;
+	
+	var secondLast = this.points[this.points.length-2];
+	var d = this.tail.pos.distance(secondLast.pos);
+	if(d > dist)
+	{
+		this.tail.isConnected = false;
+		this.tail = secondLast;
+		this.points.pop();
+	}
+};
+
+
+
+Chain.prototype.drawConnections = function() {
+	
+	if(this.points.length < 2)
+		return;
+	
+	mySketch.glcolor(0, 0, 0, 1);
+	mySketch.gllinewidth(1);
+	for(var i = 0; i < this.points.length-1; i++)
+	{
+		mySketch.linesegment(this.points[i].pos.x, this.points[i].pos.y, this.points[i].pos.z, this.points[i+1].pos.x, this.points[i+1].pos.y, this.points[i+1].pos.z);
+	}
+
+};
+
+
