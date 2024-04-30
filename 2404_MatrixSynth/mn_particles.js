@@ -12,7 +12,7 @@ declareattribute("xspeed");
 var yspeed = 1;
 declareattribute("yspeed");
 
-var dist = 0.3;
+var dist = 2.5;
 declareattribute("dist");
 
 var radius = 0.02;
@@ -22,6 +22,9 @@ var moving = 0;
 declareattribute("moving");
 
 var padding = 1.0;
+
+var maxLength = 1;	//must at least be 1
+declareattribute("maxLength");
 
 /*
 var myWindow = new JitterObject("jit.window", "mncloud");
@@ -229,6 +232,7 @@ Chain.prototype.removePoint = function() {
 
 
 Chain.prototype.displayTail = function() {
+	
 	if(this.points.length == 0)
 	{
 		return;
@@ -244,13 +248,20 @@ Chain.prototype.displayTail = function() {
 
 Chain.prototype.update = function() {
 
-	this.displayTail();
-		this.disconnectTail();
 	this.makeConnections();
+	this.disconnectTail();
 	this.drawConnections();
+	this.displayTail();
+
 };
 
 Chain.prototype.makeConnections = function() {
+	
+	if(this.points.length >= maxLength)
+	{
+		return;
+	}
+	
 	for(var i = 0; i < particles.length; i++)
 	{
 		var p = particles[i];
@@ -273,6 +284,14 @@ Chain.prototype.makeConnections = function() {
 };
 
 Chain.prototype.disconnectTail = function() {
+	
+	while(this.points.length > maxLength)
+	{
+		this.tail.isConnected = false;
+		this.tail = secondLast;
+		this.points.pop();
+	}
+	
 	if(this.points.length < 2)
 		return;
 	
