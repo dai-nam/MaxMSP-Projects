@@ -1,11 +1,15 @@
 autowatch = 1;
-outlets = 0;
+outlets = 1;
 
 
 var particles = [];
 var samples = [];
 var chains = [];
+var id = 0;
 
+
+var speedMultiplier = 1;
+declareattribute("speedMultiplier");
 
 var xspeed = 1;
 declareattribute("xspeed");
@@ -53,7 +57,8 @@ mySketch.blend = "alphablend";
 function insertPoint() {
   var a = arrayfromargs(messagename,arguments);
 	a.shift();
-	var particle = new Particle(a[0], a[1], xspeed/100, yspeed/100);
+	var fxId = Math.floor(Math.random() * 3);
+	var particle = new Particle(a[0], a[1], xspeed/100, yspeed/100, fxId);
 	if(!moveWithMouse())
 	{
 		particles.push(particle);
@@ -77,6 +82,7 @@ function clear() {
 	particles = [];
 	samples = [];
 	chains = [];
+	id = 0;
 }
 
 
@@ -111,6 +117,8 @@ function draw()
 	for(var j = 0; j < chains.length; j++)
 	{
 		chains[j].update();
+		if(j == 0)
+			chains[j].outputChain(); //erstmal nur die erste Chain ausgeben
 	}
 	
 	
@@ -130,11 +138,13 @@ function moveWithMouse()
 }
 
 
-function Particle(x, y, sx, sy) {
+function Particle(x, y, sx, sy, fxId) {
     this.pos = new Vector(x, y, 0);
     this.speedX = sx;
     this.speedY = sy;
 	this.isConnected = false;
+	this.id = id++;
+	this.effectId = fxId;
 }
 
 Particle.prototype.display = function() {
@@ -144,7 +154,7 @@ Particle.prototype.display = function() {
 
 Particle.prototype.move = function() {
 	
-		
+
 	if(moving == 0)
 	{
 		return;
@@ -174,11 +184,12 @@ function Sample(x, y, sx, sy) {
     this.pos = new Vector(x, y, 0);
     this.speedX = sx;
     this.speedY = sy;
+	this.id = id++;
 }
 
 Sample.prototype.move = function() {
 	
-		
+
 	if(moving == 0)
 	{
 		return;
@@ -225,9 +236,6 @@ Chain.prototype.addPoint = function(point) {
 	this.tail = point;
 };
 
-Chain.prototype.removePoint = function() {
-
-};
 
 
 
@@ -242,7 +250,7 @@ Chain.prototype.displayTail = function() {
 		mySketch.moveto(this.tail.pos.x, this.tail.pos.y, 0);
 		mySketch.glcolor(1, 0, 0, 1);	
 		mySketch.gllinewidth(3);
-		mySketch.framecircle(radius+0.02);	
+		mySketch.framecircle(2*radius);	
 		mySketch.glpopmatrix();
 };
 
@@ -252,60 +260,64 @@ Chain.prototype.update = function() {
 	this.disconnectTail();
 	this.drawConnections();
 	this.displayTail();
+//	this.outputChain();
 
 };
 
 Chain.prototype.makeConnections = function() {
 	
-	if(this.points.length >= maxLength)
-	{
-		return;
-	}
-	
-	for(var i = 0; i < particles.length; i++)
-	{
-		var p = particles[i];
-		
-		if(p.isConnected)
-		{
-			continue;
-		}
-		
-		var d = this.tail.pos.distance(p.pos);
-		if(d > dist)
-		{
-			continue;
-		}
-		
-		this.points.push(p);
-		p.isConnected = true;		
-		this.tail = p;
-	}
+    if (this.points.length >= maxLength) {
+        return;
+    }
+
+    var closestParticle = null;
+    var minDistance = Infinity;
+
+    for (var i = 0; i < particles.length; i++) {
+        var p = particles[i];
+        if (!p.isConnected) {
+            var d = this.tail.pos.distance(p.pos);
+            if (d < minDistance) {
+                minDistance = d;
+                closestParticle = p;
+            }
+        }
+    }
+
+    if (closestParticle && minDistance <= dist) {
+        this.points.push(closestParticle);
+        closestParticle.isConnected = true;
+        this.tail = closestParticle;
+    }
 };
+
+
 
 Chain.prototype.disconnectTail = function() {
 	
+	if(this.points.length < 2)
+	{		
+		return;
+	}
+		
+	var secondLast = this.points[this.points.length-2];
 	while(this.points.length > maxLength)
 	{
-		this.tail.isConnected = false;
-		this.tail = secondLast;
-		this.points.pop();
+		this.updateTail(secondLast);
 	}
 	
-	if(this.points.length < 2)
-		return;
-	
-	var secondLast = this.points[this.points.length-2];
 	var d = this.tail.pos.distance(secondLast.pos);
 	if(d > dist)
 	{
-		this.tail.isConnected = false;
-		this.tail = secondLast;
-		this.points.pop();
+		this.updateTail(secondLast);
 	}
 };
 
-
+Chain.prototype.updateTail = function(newTail) {
+		this.tail.isConnected = false;
+		this.tail = newTail;
+		this.points.pop();
+};
 
 Chain.prototype.drawConnections = function() {
 	
@@ -321,4 +333,19 @@ Chain.prototype.drawConnections = function() {
 
 };
 
+
+Chain.prototype.outputChain = function() {
+	
+	var routing = "";
+	//A samples does not have an effectsId
+	routing = routing+this.points[0].id+" ";
+	
+	for(var i = 1; i < this.points.length; i++)
+	{
+		routing = routing+this.points[i].effectId+" ";
+	}
+	
+	//post(str+"\n");
+	outlet(0, routing);
+};
 
