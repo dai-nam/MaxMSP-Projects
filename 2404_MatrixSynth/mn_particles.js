@@ -1,11 +1,12 @@
 autowatch = 1;
-outlets = 1;
+outlets = 2;
 
 
 var particles = [];
 var samples = [];
 var chains = [];
 var id = 0;
+var sampleNum = 1;//poly index starts at 1
 
 
 var speedMultiplier = 1;
@@ -83,6 +84,7 @@ function clear() {
 	samples = [];
 	chains = [];
 	id = 0;
+	sampleNum = 1;
 }
 
 
@@ -114,12 +116,16 @@ function draw()
 		samples[i].display();
 	}
 	
+	
+	var sampleIds = "";
 	for(var j = 0; j < chains.length; j++)
 	{
 		chains[j].update();
-		if(j == 0)
-			chains[j].outputChain(); //erstmal nur die erste Chain ausgeben
+	//	if(j == 0) //erstmal nur die erste Chain ausgeben
+			chains[j].outputChain(); 
+			sampleIds = sampleIds + chains[j].head.id+" "; 
 	}
+	outlet(1, sampleIds);
 	
 	
 	mySketch.draw();
@@ -174,8 +180,8 @@ Particle.prototype.move = function() {
 		this.speedY = -this.speedY;
 	}
 		
-	this.pos.x += this.speedX;
-	this.pos.y += this.speedY;
+	this.pos.x = this.pos.x + this.speedX * speedMultiplier;
+	this.pos.y = this.pos.y + this.speedY * speedMultiplier;
 
 };
 
@@ -184,7 +190,7 @@ function Sample(x, y, sx, sy) {
     this.pos = new Vector(x, y, 0);
     this.speedX = sx;
     this.speedY = sy;
-	this.id = id++;
+	this.id = sampleNum++;
 }
 
 Sample.prototype.move = function() {
@@ -208,9 +214,9 @@ Sample.prototype.move = function() {
 	{
 		this.speedY = -this.speedY;
 	}
-		
-	this.pos.x += this.speedX;
-	this.pos.y += this.speedY;
+	
+	this.pos.x = this.pos.x + this.speedX * speedMultiplier;
+	this.pos.y = this.pos.y + this.speedY * speedMultiplier;
 
 };
 
@@ -337,8 +343,8 @@ Chain.prototype.drawConnections = function() {
 Chain.prototype.outputChain = function() {
 	
 	var routing = "";
-	//A samples does not have an effectsId
 	routing = routing+this.points[0].id+" ";
+	//A samples does not have an effectsId
 	
 	for(var i = 1; i < this.points.length; i++)
 	{
@@ -348,4 +354,6 @@ Chain.prototype.outputChain = function() {
 	//post(str+"\n");
 	outlet(0, routing);
 };
+
+
 
