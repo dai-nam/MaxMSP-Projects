@@ -59,6 +59,7 @@ function insertPoint() {
   var a = arrayfromargs(messagename,arguments);
 	a.shift();
 	var fxId = Math.floor(Math.random() * 3);
+
 	var particle = new Particle(a[0], a[1], xspeed/100, yspeed/100, fxId);
 	if(!moveWithMouse())
 	{
