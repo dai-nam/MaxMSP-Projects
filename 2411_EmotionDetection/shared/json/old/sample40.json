@@ -1,0 +1,1272 @@
+[
+    {
+        "start": 0.0,
+        "end": 0.02,
+        "scores": {
+            "angry": 0.2465,
+            "neutral": 0.4356,
+            "happy": 0.318,
+            "sad": 1.0
+        }
+    },
+    {
+        "start": 0.02,
+        "end": 0.04,
+        "scores": {
+            "angry": 0.1423,
+            "neutral": 0.3747,
+            "happy": 0.2657,
+            "sad": 1.0
+        }
+    },
+    {
+        "start": 0.04,
+        "end": 0.06,
+        "scores": {
+            "angry": 0.1701,
+            "neutral": 0.3831,
+            "happy": 0.2821,
+            "sad": 1.0
+        }
+    },
+    {
+        "start": 0.06,
+        "end": 0.08,
+        "scores": {
+            "angry": 0.1688,
+            "neutral": 0.3744,
+            "happy": 0.2934,
+            "sad": 1.0
+        }
+    },
+    {
+        "start": 0.08,
+        "end": 0.1,
+        "scores": {
+            "angry": 0.1058,
+            "neutral": 0.3371,
+            "happy": 0.2316,
+            "sad": 1.0
+        }
+    },
+    {
+        "start": 0.1,
+        "end": 0.12,
+        "scores": {
+            "angry": 0.1265,
+            "neutral": 0.3523,
+            "happy": 0.2403,
+            "sad": 1.0
+        }
+    },
+    {
+        "start": 0.12,
+        "end": 0.14,
+        "scores": {
+            "angry": 0.1023,
+            "neutral": 0.341,
+            "happy": 0.2217,
+            "sad": 1.0
+        }
+    },
+    {
+        "start": 0.14,
+        "end": 0.16,
+        "scores": {
+            "angry": 0.1084,
+            "neutral": 0.3507,
+            "happy": 0.2375,
+            "sad": 1.0
+        }
+    },
+    {
+        "start": 0.16,
+        "end": 0.18,
+        "scores": {
+            "angry": 0.1089,
+            "neutral": 0.3583,
+            "happy": 0.2306,
+            "sad": 1.0
+        }
+    },
+    {
+        "start": 0.18,
+        "end": 0.2,
+        "scores": {
+            "angry": 0.1132,
+            "neutral": 0.3658,
+            "happy": 0.2122,
+            "sad": 1.0
+        }
+    },
+    {
+        "start": 0.2,
+        "end": 0.22,
+        "scores": {
+            "angry": 0.099,
+            "neutral": 0.3346,
+            "happy": 0.2028,
+            "sad": 1.0
+        }
+    },
+    {
+        "start": 0.22,
+        "end": 0.24,
+        "scores": {
+            "angry": 0.0947,
+            "neutral": 0.3218,
+            "happy": 0.1849,
+            "sad": 1.0
+        }
+    },
+    {
+        "start": 0.24,
+        "end": 0.26,
+        "scores": {
+            "angry": 0.0804,
+            "neutral": 0.3033,
+            "happy": 0.1723,
+            "sad": 1.0
+        }
+    },
+    {
+        "start": 0.26,
+        "end": 0.28,
+        "scores": {
+            "angry": 0.0589,
+            "neutral": 0.316,
+            "happy": 0.1716,
+            "sad": 1.0
+        }
+    },
+    {
+        "start": 0.28,
+        "end": 0.3,
+        "scores": {
+            "angry": 0.1121,
+            "neutral": 0.3829,
+            "happy": 0.1957,
+            "sad": 1.0
+        }
+    },
+    {
+        "start": 0.3,
+        "end": 0.32,
+        "scores": {
+            "angry": 0.105,
+            "neutral": 0.3703,
+            "happy": 0.1544,
+            "sad": 1.0
+        }
+    },
+    {
+        "start": 0.32,
+        "end": 0.34,
+        "scores": {
+            "angry": 0.0652,
+            "neutral": 0.3373,
+            "happy": 0.154,
+            "sad": 1.0
+        }
+    },
+    {
+        "start": 0.34,
+        "end": 0.36,
+        "scores": {
+            "angry": 0.0466,
+            "neutral": 0.2859,
+            "happy": 0.1513,
+            "sad": 1.0
+        }
+    },
+    {
+        "start": 0.36,
+        "end": 0.38,
+        "scores": {
+            "angry": 0.0298,
+            "neutral": 0.2154,
+            "happy": 0.1434,
+            "sad": 1.0
+        }
+    },
+    {
+        "start": 0.38,
+        "end": 0.4,
+        "scores": {
+            "angry": 0.0428,
+            "neutral": 0.2357,
+            "happy": 0.1459,
+            "sad": 1.0
+        }
+    },
+    {
+        "start": 0.4,
+        "end": 0.42,
+        "scores": {
+            "angry": 0.0204,
+            "neutral": 0.2276,
+            "happy": 0.1379,
+            "sad": 1.0
+        }
+    },
+    {
+        "start": 0.42,
+        "end": 0.44,
+        "scores": {
+            "angry": 0.0276,
+            "neutral": 0.2439,
+            "happy": 0.1496,
+            "sad": 1.0
+        }
+    },
+    {
+        "start": 0.44,
+        "end": 0.46,
+        "scores": {
+            "angry": 0.0435,
+            "neutral": 0.2342,
+            "happy": 0.1738,
+            "sad": 1.0
+        }
+    },
+    {
+        "start": 0.46,
+        "end": 0.48,
+        "scores": {
+            "angry": 0.0408,
+            "neutral": 0.2154,
+            "happy": 0.1831,
+            "sad": 1.0
+        }
+    },
+    {
+        "start": 0.48,
+        "end": 0.5,
+        "scores": {
+            "angry": 0.0151,
+            "neutral": 0.2219,
+            "happy": 0.1885,
+            "sad": 1.0
+        }
+    },
+    {
+        "start": 0.5,
+        "end": 0.52,
+        "scores": {
+            "angry": 0.0118,
+            "neutral": 0.2109,
+            "happy": 0.1721,
+            "sad": 1.0
+        }
+    },
+    {
+        "start": 0.52,
+        "end": 0.54,
+        "scores": {
+            "angry": 0.0209,
+            "neutral": 0.2338,
+            "happy": 0.1315,
+            "sad": 1.0
+        }
+    },
+    {
+        "start": 0.54,
+        "end": 0.56,
+        "scores": {
+            "angry": 0.0316,
+            "neutral": 0.2254,
+            "happy": 0.1373,
+            "sad": 1.0
+        }
+    },
+    {
+        "start": 0.56,
+        "end": 0.58,
+        "scores": {
+            "angry": 0.0416,
+            "neutral": 0.2252,
+            "happy": 0.1773,
+            "sad": 1.0
+        }
+    },
+    {
+        "start": 0.58,
+        "end": 0.6,
+        "scores": {
+            "angry": 0.0436,
+            "neutral": 0.2156,
+            "happy": 0.1811,
+            "sad": 1.0
+        }
+    },
+    {
+        "start": 0.6,
+        "end": 0.62,
+        "scores": {
+            "angry": 0.0227,
+            "neutral": 0.2127,
+            "happy": 0.1605,
+            "sad": 1.0
+        }
+    },
+    {
+        "start": 0.62,
+        "end": 0.64,
+        "scores": {
+            "angry": 0.0311,
+            "neutral": 0.2515,
+            "happy": 0.1625,
+            "sad": 1.0
+        }
+    },
+    {
+        "start": 0.64,
+        "end": 0.66,
+        "scores": {
+            "angry": 0.0169,
+            "neutral": 0.232,
+            "happy": 0.1359,
+            "sad": 1.0
+        }
+    },
+    {
+        "start": 0.66,
+        "end": 0.68,
+        "scores": {
+            "angry": 0.0189,
+            "neutral": 0.2278,
+            "happy": 0.1057,
+            "sad": 1.0
+        }
+    },
+    {
+        "start": 0.68,
+        "end": 0.7,
+        "scores": {
+            "angry": 0.0097,
+            "neutral": 0.2409,
+            "happy": 0.1115,
+            "sad": 1.0
+        }
+    },
+    {
+        "start": 0.7,
+        "end": 0.72,
+        "scores": {
+            "angry": 0.0315,
+            "neutral": 0.2423,
+            "happy": 0.1506,
+            "sad": 1.0
+        }
+    },
+    {
+        "start": 0.72,
+        "end": 0.74,
+        "scores": {
+            "angry": 0.0154,
+            "neutral": 0.2364,
+            "happy": 0.1655,
+            "sad": 1.0
+        }
+    },
+    {
+        "start": 0.74,
+        "end": 0.76,
+        "scores": {
+            "angry": 0.0029,
+            "neutral": 0.2323,
+            "happy": 0.1559,
+            "sad": 1.0
+        }
+    },
+    {
+        "start": 0.76,
+        "end": 0.78,
+        "scores": {
+            "angry": 0.0145,
+            "neutral": 0.2256,
+            "happy": 0.175,
+            "sad": 1.0
+        }
+    },
+    {
+        "start": 0.78,
+        "end": 0.8,
+        "scores": {
+            "angry": 0.0425,
+            "neutral": 0.2331,
+            "happy": 0.2129,
+            "sad": 1.0
+        }
+    },
+    {
+        "start": 0.8,
+        "end": 0.82,
+        "scores": {
+            "angry": 0.0555,
+            "neutral": 0.2387,
+            "happy": 0.2184,
+            "sad": 1.0
+        }
+    },
+    {
+        "start": 0.82,
+        "end": 0.84,
+        "scores": {
+            "angry": 0.0634,
+            "neutral": 0.257,
+            "happy": 0.2315,
+            "sad": 1.0
+        }
+    },
+    {
+        "start": 0.84,
+        "end": 0.86,
+        "scores": {
+            "angry": 0.0714,
+            "neutral": 0.2622,
+            "happy": 0.2376,
+            "sad": 1.0
+        }
+    },
+    {
+        "start": 0.86,
+        "end": 0.88,
+        "scores": {
+            "angry": 0.0849,
+            "neutral": 0.2755,
+            "happy": 0.2563,
+            "sad": 1.0
+        }
+    },
+    {
+        "start": 0.88,
+        "end": 0.9,
+        "scores": {
+            "angry": 0.0725,
+            "neutral": 0.2485,
+            "happy": 0.2424,
+            "sad": 1.0
+        }
+    },
+    {
+        "start": 0.9,
+        "end": 0.92,
+        "scores": {
+            "angry": 0.058,
+            "neutral": 0.2382,
+            "happy": 0.2237,
+            "sad": 1.0
+        }
+    },
+    {
+        "start": 0.92,
+        "end": 0.94,
+        "scores": {
+            "angry": 0.0594,
+            "neutral": 0.2347,
+            "happy": 0.2286,
+            "sad": 1.0
+        }
+    },
+    {
+        "start": 0.94,
+        "end": 0.96,
+        "scores": {
+            "angry": 0.0637,
+            "neutral": 0.2554,
+            "happy": 0.2169,
+            "sad": 1.0
+        }
+    },
+    {
+        "start": 0.96,
+        "end": 0.98,
+        "scores": {
+            "angry": 0.0629,
+            "neutral": 0.2468,
+            "happy": 0.2036,
+            "sad": 1.0
+        }
+    },
+    {
+        "start": 0.98,
+        "end": 1.0,
+        "scores": {
+            "angry": 0.0325,
+            "neutral": 0.2495,
+            "happy": 0.1682,
+            "sad": 1.0
+        }
+    },
+    {
+        "start": 1.0,
+        "end": 1.02,
+        "scores": {
+            "angry": 0.0204,
+            "neutral": 0.2336,
+            "happy": 0.1609,
+            "sad": 1.0
+        }
+    },
+    {
+        "start": 1.02,
+        "end": 1.04,
+        "scores": {
+            "angry": 0.0371,
+            "neutral": 0.2416,
+            "happy": 0.1549,
+            "sad": 1.0
+        }
+    },
+    {
+        "start": 1.04,
+        "end": 1.06,
+        "scores": {
+            "angry": 0.0141,
+            "neutral": 0.2075,
+            "happy": 0.1568,
+            "sad": 1.0
+        }
+    },
+    {
+        "start": 1.06,
+        "end": 1.08,
+        "scores": {
+            "angry": 0.0191,
+            "neutral": 0.2248,
+            "happy": 0.1794,
+            "sad": 1.0
+        }
+    },
+    {
+        "start": 1.08,
+        "end": 1.1,
+        "scores": {
+            "angry": 0.0343,
+            "neutral": 0.2297,
+            "happy": 0.1833,
+            "sad": 1.0
+        }
+    },
+    {
+        "start": 1.1,
+        "end": 1.12,
+        "scores": {
+            "angry": 0.054,
+            "neutral": 0.2209,
+            "happy": 0.171,
+            "sad": 1.0
+        }
+    },
+    {
+        "start": 1.12,
+        "end": 1.14,
+        "scores": {
+            "angry": 0.0564,
+            "neutral": 0.214,
+            "happy": 0.1748,
+            "sad": 1.0
+        }
+    },
+    {
+        "start": 1.14,
+        "end": 1.16,
+        "scores": {
+            "angry": 0.0608,
+            "neutral": 0.2415,
+            "happy": 0.2039,
+            "sad": 1.0
+        }
+    },
+    {
+        "start": 1.16,
+        "end": 1.18,
+        "scores": {
+            "angry": 0.0468,
+            "neutral": 0.2281,
+            "happy": 0.1931,
+            "sad": 1.0
+        }
+    },
+    {
+        "start": 1.18,
+        "end": 1.2,
+        "scores": {
+            "angry": 0.0332,
+            "neutral": 0.2365,
+            "happy": 0.1835,
+            "sad": 1.0
+        }
+    },
+    {
+        "start": 1.2,
+        "end": 1.22,
+        "scores": {
+            "angry": 0.0437,
+            "neutral": 0.2379,
+            "happy": 0.1985,
+            "sad": 1.0
+        }
+    },
+    {
+        "start": 1.22,
+        "end": 1.24,
+        "scores": {
+            "angry": 0.0446,
+            "neutral": 0.242,
+            "happy": 0.1922,
+            "sad": 1.0
+        }
+    },
+    {
+        "start": 1.24,
+        "end": 1.26,
+        "scores": {
+            "angry": 0.0201,
+            "neutral": 0.2258,
+            "happy": 0.1532,
+            "sad": 1.0
+        }
+    },
+    {
+        "start": 1.26,
+        "end": 1.28,
+        "scores": {
+            "angry": 0.0559,
+            "neutral": 0.2712,
+            "happy": 0.176,
+            "sad": 1.0
+        }
+    },
+    {
+        "start": 1.28,
+        "end": 1.3,
+        "scores": {
+            "angry": 0.0,
+            "neutral": 0.2281,
+            "happy": 0.1458,
+            "sad": 1.0
+        }
+    },
+    {
+        "start": 1.3,
+        "end": 1.32,
+        "scores": {
+            "angry": 0.0068,
+            "neutral": 0.2116,
+            "happy": 0.1582,
+            "sad": 1.0
+        }
+    },
+    {
+        "start": 1.32,
+        "end": 1.34,
+        "scores": {
+            "angry": 0.019,
+            "neutral": 0.2078,
+            "happy": 0.1554,
+            "sad": 1.0
+        }
+    },
+    {
+        "start": 1.34,
+        "end": 1.36,
+        "scores": {
+            "angry": 0.046,
+            "neutral": 0.2233,
+            "happy": 0.1625,
+            "sad": 1.0
+        }
+    },
+    {
+        "start": 1.36,
+        "end": 1.38,
+        "scores": {
+            "angry": 0.071,
+            "neutral": 0.2308,
+            "happy": 0.1721,
+            "sad": 1.0
+        }
+    },
+    {
+        "start": 1.38,
+        "end": 1.4,
+        "scores": {
+            "angry": 0.0768,
+            "neutral": 0.27,
+            "happy": 0.2002,
+            "sad": 1.0
+        }
+    },
+    {
+        "start": 1.4,
+        "end": 1.42,
+        "scores": {
+            "angry": 0.0731,
+            "neutral": 0.274,
+            "happy": 0.2052,
+            "sad": 1.0
+        }
+    },
+    {
+        "start": 1.42,
+        "end": 1.44,
+        "scores": {
+            "angry": 0.0727,
+            "neutral": 0.2778,
+            "happy": 0.1978,
+            "sad": 1.0
+        }
+    },
+    {
+        "start": 1.44,
+        "end": 1.46,
+        "scores": {
+            "angry": 0.0599,
+            "neutral": 0.2512,
+            "happy": 0.1872,
+            "sad": 1.0
+        }
+    },
+    {
+        "start": 1.46,
+        "end": 1.48,
+        "scores": {
+            "angry": 0.0531,
+            "neutral": 0.2575,
+            "happy": 0.1753,
+            "sad": 1.0
+        }
+    },
+    {
+        "start": 1.48,
+        "end": 1.5,
+        "scores": {
+            "angry": 0.0621,
+            "neutral": 0.2739,
+            "happy": 0.1806,
+            "sad": 1.0
+        }
+    },
+    {
+        "start": 1.5,
+        "end": 1.52,
+        "scores": {
+            "angry": 0.0518,
+            "neutral": 0.2832,
+            "happy": 0.1718,
+            "sad": 1.0
+        }
+    },
+    {
+        "start": 1.52,
+        "end": 1.54,
+        "scores": {
+            "angry": 0.0491,
+            "neutral": 0.2762,
+            "happy": 0.1669,
+            "sad": 1.0
+        }
+    },
+    {
+        "start": 1.54,
+        "end": 1.56,
+        "scores": {
+            "angry": 0.0409,
+            "neutral": 0.256,
+            "happy": 0.1497,
+            "sad": 1.0
+        }
+    },
+    {
+        "start": 1.56,
+        "end": 1.58,
+        "scores": {
+            "angry": 0.0418,
+            "neutral": 0.2393,
+            "happy": 0.1394,
+            "sad": 1.0
+        }
+    },
+    {
+        "start": 1.58,
+        "end": 1.6,
+        "scores": {
+            "angry": 0.051,
+            "neutral": 0.2351,
+            "happy": 0.144,
+            "sad": 1.0
+        }
+    },
+    {
+        "start": 1.6,
+        "end": 1.62,
+        "scores": {
+            "angry": 0.0258,
+            "neutral": 0.2141,
+            "happy": 0.1234,
+            "sad": 1.0
+        }
+    },
+    {
+        "start": 1.62,
+        "end": 1.64,
+        "scores": {
+            "angry": 0.0235,
+            "neutral": 0.2222,
+            "happy": 0.1343,
+            "sad": 1.0
+        }
+    },
+    {
+        "start": 1.64,
+        "end": 1.66,
+        "scores": {
+            "angry": 0.0319,
+            "neutral": 0.2443,
+            "happy": 0.1403,
+            "sad": 1.0
+        }
+    },
+    {
+        "start": 1.66,
+        "end": 1.68,
+        "scores": {
+            "angry": 0.0433,
+            "neutral": 0.2589,
+            "happy": 0.1554,
+            "sad": 1.0
+        }
+    },
+    {
+        "start": 1.68,
+        "end": 1.7,
+        "scores": {
+            "angry": 0.0665,
+            "neutral": 0.3013,
+            "happy": 0.1759,
+            "sad": 1.0
+        }
+    },
+    {
+        "start": 1.7,
+        "end": 1.72,
+        "scores": {
+            "angry": 0.0798,
+            "neutral": 0.3264,
+            "happy": 0.1862,
+            "sad": 1.0
+        }
+    },
+    {
+        "start": 1.72,
+        "end": 1.74,
+        "scores": {
+            "angry": 0.074,
+            "neutral": 0.3237,
+            "happy": 0.1741,
+            "sad": 1.0
+        }
+    },
+    {
+        "start": 1.74,
+        "end": 1.76,
+        "scores": {
+            "angry": 0.0882,
+            "neutral": 0.3319,
+            "happy": 0.1802,
+            "sad": 1.0
+        }
+    },
+    {
+        "start": 1.76,
+        "end": 1.78,
+        "scores": {
+            "angry": 0.1117,
+            "neutral": 0.3623,
+            "happy": 0.2035,
+            "sad": 1.0
+        }
+    },
+    {
+        "start": 1.78,
+        "end": 1.8,
+        "scores": {
+            "angry": 0.1447,
+            "neutral": 0.3875,
+            "happy": 0.2105,
+            "sad": 1.0
+        }
+    },
+    {
+        "start": 1.8,
+        "end": 1.82,
+        "scores": {
+            "angry": 0.15,
+            "neutral": 0.3978,
+            "happy": 0.2119,
+            "sad": 1.0
+        }
+    },
+    {
+        "start": 1.82,
+        "end": 1.84,
+        "scores": {
+            "angry": 0.1316,
+            "neutral": 0.3706,
+            "happy": 0.1956,
+            "sad": 1.0
+        }
+    },
+    {
+        "start": 1.84,
+        "end": 1.86,
+        "scores": {
+            "angry": 0.1484,
+            "neutral": 0.3838,
+            "happy": 0.207,
+            "sad": 1.0
+        }
+    },
+    {
+        "start": 1.86,
+        "end": 1.88,
+        "scores": {
+            "angry": 0.1606,
+            "neutral": 0.4062,
+            "happy": 0.2136,
+            "sad": 1.0
+        }
+    },
+    {
+        "start": 1.88,
+        "end": 1.9,
+        "scores": {
+            "angry": 0.2003,
+            "neutral": 0.4209,
+            "happy": 0.2358,
+            "sad": 1.0
+        }
+    },
+    {
+        "start": 1.9,
+        "end": 1.92,
+        "scores": {
+            "angry": 0.2369,
+            "neutral": 0.4222,
+            "happy": 0.2512,
+            "sad": 1.0
+        }
+    },
+    {
+        "start": 1.92,
+        "end": 1.94,
+        "scores": {
+            "angry": 0.2422,
+            "neutral": 0.441,
+            "happy": 0.265,
+            "sad": 1.0
+        }
+    },
+    {
+        "start": 1.94,
+        "end": 1.96,
+        "scores": {
+            "angry": 0.3143,
+            "neutral": 0.487,
+            "happy": 0.3147,
+            "sad": 1.0
+        }
+    },
+    {
+        "start": 1.96,
+        "end": 1.98,
+        "scores": {
+            "angry": 0.3502,
+            "neutral": 0.5003,
+            "happy": 0.329,
+            "sad": 1.0
+        }
+    },
+    {
+        "start": 1.98,
+        "end": 2.0,
+        "scores": {
+            "angry": 0.3662,
+            "neutral": 0.4992,
+            "happy": 0.3418,
+            "sad": 1.0
+        }
+    },
+    {
+        "start": 2.0,
+        "end": 2.02,
+        "scores": {
+            "angry": 0.3943,
+            "neutral": 0.5227,
+            "happy": 0.3554,
+            "sad": 1.0
+        }
+    },
+    {
+        "start": 2.02,
+        "end": 2.04,
+        "scores": {
+            "angry": 0.4436,
+            "neutral": 0.5277,
+            "happy": 0.3697,
+            "sad": 1.0
+        }
+    },
+    {
+        "start": 2.04,
+        "end": 2.06,
+        "scores": {
+            "angry": 0.4642,
+            "neutral": 0.5372,
+            "happy": 0.3827,
+            "sad": 1.0
+        }
+    },
+    {
+        "start": 2.06,
+        "end": 2.08,
+        "scores": {
+            "angry": 0.4875,
+            "neutral": 0.5349,
+            "happy": 0.3875,
+            "sad": 1.0
+        }
+    },
+    {
+        "start": 2.08,
+        "end": 2.1,
+        "scores": {
+            "angry": 0.5197,
+            "neutral": 0.5476,
+            "happy": 0.4045,
+            "sad": 1.0
+        }
+    },
+    {
+        "start": 2.1,
+        "end": 2.12,
+        "scores": {
+            "angry": 0.5689,
+            "neutral": 0.5451,
+            "happy": 0.4093,
+            "sad": 1.0
+        }
+    },
+    {
+        "start": 2.12,
+        "end": 2.14,
+        "scores": {
+            "angry": 0.6007,
+            "neutral": 0.5589,
+            "happy": 0.4326,
+            "sad": 1.0
+        }
+    },
+    {
+        "start": 2.14,
+        "end": 2.16,
+        "scores": {
+            "angry": 0.657,
+            "neutral": 0.5705,
+            "happy": 0.456,
+            "sad": 0.9999
+        }
+    },
+    {
+        "start": 2.16,
+        "end": 2.18,
+        "scores": {
+            "angry": 0.6936,
+            "neutral": 0.5863,
+            "happy": 0.4748,
+            "sad": 0.9998
+        }
+    },
+    {
+        "start": 2.18,
+        "end": 2.2,
+        "scores": {
+            "angry": 0.7254,
+            "neutral": 0.5975,
+            "happy": 0.4857,
+            "sad": 0.9996
+        }
+    },
+    {
+        "start": 2.2,
+        "end": 2.22,
+        "scores": {
+            "angry": 0.757,
+            "neutral": 0.5978,
+            "happy": 0.5109,
+            "sad": 0.9994
+        }
+    },
+    {
+        "start": 2.22,
+        "end": 2.24,
+        "scores": {
+            "angry": 0.7745,
+            "neutral": 0.5993,
+            "happy": 0.5149,
+            "sad": 0.9992
+        }
+    },
+    {
+        "start": 2.24,
+        "end": 2.26,
+        "scores": {
+            "angry": 0.791,
+            "neutral": 0.6034,
+            "happy": 0.5213,
+            "sad": 0.9989
+        }
+    },
+    {
+        "start": 2.26,
+        "end": 2.28,
+        "scores": {
+            "angry": 0.8083,
+            "neutral": 0.6139,
+            "happy": 0.5349,
+            "sad": 0.9984
+        }
+    },
+    {
+        "start": 2.28,
+        "end": 2.3,
+        "scores": {
+            "angry": 0.8011,
+            "neutral": 0.5884,
+            "happy": 0.5212,
+            "sad": 0.9986
+        }
+    },
+    {
+        "start": 2.3,
+        "end": 2.32,
+        "scores": {
+            "angry": 0.829,
+            "neutral": 0.6122,
+            "happy": 0.5484,
+            "sad": 0.9977
+        }
+    },
+    {
+        "start": 2.32,
+        "end": 2.34,
+        "scores": {
+            "angry": 0.8404,
+            "neutral": 0.6085,
+            "happy": 0.5511,
+            "sad": 0.9972
+        }
+    },
+    {
+        "start": 2.34,
+        "end": 2.36,
+        "scores": {
+            "angry": 0.8555,
+            "neutral": 0.6093,
+            "happy": 0.553,
+            "sad": 0.9962
+        }
+    },
+    {
+        "start": 2.36,
+        "end": 2.38,
+        "scores": {
+            "angry": 0.5871,
+            "neutral": 0.5496,
+            "happy": 0.406,
+            "sad": 1.0
+        }
+    },
+    {
+        "start": 2.38,
+        "end": 2.4,
+        "scores": {
+            "angry": 0.8402,
+            "neutral": 0.6007,
+            "happy": 0.5419,
+            "sad": 0.9972
+        }
+    },
+    {
+        "start": 2.4,
+        "end": 2.42,
+        "scores": {
+            "angry": 0.8269,
+            "neutral": 0.6182,
+            "happy": 0.5516,
+            "sad": 0.9978
+        }
+    },
+    {
+        "start": 2.42,
+        "end": 2.44,
+        "scores": {
+            "angry": 0.8216,
+            "neutral": 0.6011,
+            "happy": 0.5352,
+            "sad": 0.998
+        }
+    },
+    {
+        "start": 2.44,
+        "end": 2.46,
+        "scores": {
+            "angry": 0.6058,
+            "neutral": 0.5706,
+            "happy": 0.4247,
+            "sad": 0.9999
+        }
+    },
+    {
+        "start": 2.46,
+        "end": 2.48,
+        "scores": {
+            "angry": 0.841,
+            "neutral": 0.619,
+            "happy": 0.5579,
+            "sad": 0.9971
+        }
+    },
+    {
+        "start": 2.48,
+        "end": 2.5,
+        "scores": {
+            "angry": 0.82,
+            "neutral": 0.6282,
+            "happy": 0.5394,
+            "sad": 0.998
+        }
+    },
+    {
+        "start": 2.5,
+        "end": 2.52,
+        "scores": {
+            "angry": 0.8162,
+            "neutral": 0.6201,
+            "happy": 0.5333,
+            "sad": 0.9982
+        }
+    },
+    {
+        "start": 2.52,
+        "end": 2.54,
+        "scores": {
+            "angry": 0.8881,
+            "neutral": 0.6496,
+            "happy": 0.5653,
+            "sad": 0.9928
+        }
+    }
+]

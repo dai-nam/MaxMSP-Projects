@@ -1,0 +1,29 @@
+--> error missing k2 module
+pip uninstall pytorch and torchaudio Versions installed by requirements.txt
+
+install k2 latest Version from Website
+https://k2-fsa.github.io/k2/installation/from_wheels.html
+
+pip install torchaudio and pytorch 2.5.1
+
+--> running python Tests will still fail a few, but no more missing module error
+
+
+
+---------------------------------------------------------------------------
+https://huggingface.co/speechbrain/emotion-diarization-wavlm-large
+https://github.com/speechbrain/speechbrain
+
+git clone https://github.com/speechbrain/speechbrain.git
+conda create --name speechbrainenv python=3.11
+conda activate speechbrainenv
+cd speechbrain
+pip install -r requirements.txt
+pip install --editable .
+
+pytest tests --> error: ModuleNotFoundError: No module named 'k2' 			--> wegen dependency/Version conflicts von k2 mit torch und torchaudio und 
+pip install k2==2-1.24.4.dev20241018+cpu.torch2.5.0 -f https://k2-fsa.github.io/k2/cpu.html  	(install k2 latest Version from Website) --> anscheinend installiert der ocmmand auch torch und torchaudio 2.5
+pytest tests --> 3 failed aber keine error
+
+
+

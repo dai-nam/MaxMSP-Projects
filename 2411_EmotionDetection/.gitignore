@@ -1,0 +1,8 @@
+# Exclude the folders "safe" and "mat"
+safe/
+mat/
+
+python/speechbrain/wav2vec2_checkpoint/
+python/speechbrain/wav2vec2_checkpoints/
+python/speechbrain/Model_IEMOCAP/
+python/speechbrain/Model_WavLM/
