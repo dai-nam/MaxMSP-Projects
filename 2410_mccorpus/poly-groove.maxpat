@@ -10,7 +10,7 @@
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 34.0, 77.0, 1852.0, 929.0 ],
+		"rect" : [ 134.0, 134.0, 1852.0, 929.0 ],
 		"gridsize" : [ 15.0, 15.0 ],
 		"boxes" : [ 			{
 				"box" : 				{
@@ -381,7 +381,7 @@
 
 							}
  ],
-						"originid" : "pat-412"
+						"originid" : "pat-1410"
 					}
 ,
 					"patching_rect" : [ 596.0, 491.0, 72.0, 22.0 ],
@@ -1347,7 +1347,7 @@
 
 							}
  ],
-						"originid" : "pat-414"
+						"originid" : "pat-1412"
 					}
 ,
 					"patching_rect" : [ 300.0, 534.0, 79.0, 22.0 ],
@@ -1486,11 +1486,11 @@
 				"box" : 				{
 					"id" : "obj-7",
 					"maxclass" : "newobj",
-					"numinlets" : 5,
-					"numoutlets" : 5,
-					"outlettype" : [ "", "", "", "", "" ],
-					"patching_rect" : [ 170.0, 148.0, 329.0, 22.0 ],
-					"text" : "route speed length harmonizerFrequency enableHarmonizer"
+					"numinlets" : 6,
+					"numoutlets" : 6,
+					"outlettype" : [ "", "", "", "", "", "" ],
+					"patching_rect" : [ 170.0, 148.0, 355.0, 22.0 ],
+					"text" : "route speed length harmonizerFrequency enableHarmonizer loop"
 				}
 
 			}
@@ -1870,7 +1870,7 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-5", 0 ],
-					"source" : [ "obj-7", 4 ]
+					"source" : [ "obj-7", 5 ]
 				}
 
 			}
@@ -1882,7 +1882,7 @@
 
 			}
  ],
-		"originid" : "pat-410"
+		"originid" : "pat-1408"
 	}
 
 }
